@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31605.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "FaceRec", "FaceRec\FaceRec.pyproj", "{A2ECD923-63A3-4A6D-A2DF-8FEE26470EBD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2ECD923-63A3-4A6D-A2DF-8FEE26470EBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2ECD923-63A3-4A6D-A2DF-8FEE26470EBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8AC8970-6733-47A5-9F31-889732B81A99}
+	EndGlobalSection
+EndGlobal
