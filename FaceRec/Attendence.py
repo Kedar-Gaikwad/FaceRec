@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import face_recognition
 import os
+from datetime import datetime
 
 path = 'imgf'
 images = []
@@ -22,6 +23,25 @@ def findencode(images):
         encode=face_recognition.face_encodings(a)[0]
         encodelist.append(encode)
     return encodelist
+
+def MarkAttendance(name):
+    with open('Attendance.csv','r+') as f:
+        myDataList = f.readlines()
+        namelist=[]
+        for line in myDataList:
+            entry=line.split(',')
+            namelist.append(entry[0])
+        if name not in namelist:
+            now=datetime.now()
+            dtstring=now.strftime('%H:%M:%S')
+            f.writelines(f'\n{name},{dtstring}')
+
+
+
+       
+
+
+
 encodenumbers=findencode(images)
 print('Encoding completes')
 
@@ -48,9 +68,12 @@ while True:
            cv2.rectangle(img,(x1,y1),(x2,y2),(0,255,0),2)
            cv2.rectangle(img,(x1,y2-35),(x2,y2),(0,255,0),cv2.FILLED)
            cv2.putText(img,name,(x1+6,y2-6),cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,255),2)
+           MarkAttendance(name)
 
 
 
 
     cv2.imshow('webcam',img)
     cv2.waitKey(1)
+
+ 
